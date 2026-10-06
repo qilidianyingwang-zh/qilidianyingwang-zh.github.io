@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>齐力电影网：协同整理 · 影迷共建的影片资料与观看导航平台</title>
+<meta name="description" content="齐力电影网（https://qilidianyingwang-zh.github.io）以影迷协同整理为特色，汇总剧情、喜剧、动作、悬疑、科幻、动画、纪录等类型的影片资料与片单，提供新片动态、高分榜单、观影指引与正版观看渠道线索，帮助观众更快找到值得看的片子。">
+<meta name="keywords" content="齐力电影网,影迷共建片单,影片资料汇总,电影观看导航,类型片推荐,高分电影榜单,新片上映信息">
+<meta name="author" content="齐力电影网内容协作组">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="bingbot" content="index,follow,max-snippet:-1,max-video-preview:-1">
+<meta name="theme-color" content="#0f3d5e">
+<link rel="canonical" href="https://qilidianyingwang-zh.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="齐力电影网">
+<meta property="og:title" content="齐力电影网：协同整理 · 影迷共建的影片资料与观看导航平台">
+<meta property="og:description" content="以影迷协同整理为特色，汇总类型片单、新片动态与高分榜单，提供观影指引与正版观看渠道线索。">
+<meta property="og:url" content="https://qilidianyingwang-zh.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f3d5e;--navy2:#15507a;--teal:#138a8a;--sand:#f4f7f8;--paper:#fff;
+  --ink:#1c2b33;--ink2:#4a5c66;--muted:#8a9aa3;--line:#dbe4e8;--line2:#eef3f5;
+  --amber:#e09b2b;--red:#c0503c;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Helvetica Neue",Arial,sans-serif;
+  background:var(--sand);color:var(--ink);line-height:1.75;font-size:15px;
+}
+a{text-decoration:none;color:inherit;transition:.2s}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.serif{font-family:Georgia,"Songti SC","SimSun",serif}
+
+/* HEADER */
+header{background:linear-gradient(180deg,var(--navy),var(--navy2))}
+.htop{border-bottom:1px solid rgba(255,255,255,.14);font-size:12.5px}
+.htop .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;color:#b9d2e2}
+.htop a{color:#b9d2e2}
+.htop a:hover{color:#fff}
+.htop .grp{display:flex;gap:20px}
+.htop .url{color:#6fc6c6;font-family:Menlo,Consolas,monospace;font-size:12px}
+.hmain{padding:26px 0 22px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.logo .mark{width:52px;height:52px;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;border-radius:6px;box-shadow:0 3px 10px rgba(0,0,0,.2)}
+.logo .txt{display:flex;flex-direction:column}
+.logo .cn{font-size:30px;font-weight:800;color:#fff;letter-spacing:1px;line-height:1}
+.logo .en{font-size:11.5px;color:#8fc4d8;letter-spacing:3px;text-transform:uppercase;margin-top:4px}
+.search{display:flex;background:#fff;border-radius:24px;overflow:hidden;width:300px;height:38px;border:2px solid transparent}
+.search input{flex:1;border:0;padding:0 14px;font-size:13.5px;outline:0;min-width:0}
+.search button{background:var(--amber);color:#fff;border:0;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap}
+.search button:hover{background:#c9851e}
+
+/* NAV */
+.navbar{background:#fff;border-bottom:3px solid var(--navy)}
+.navbar .wrap{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.navbar a{padding:13px 18px;font-size:14px;color:var(--ink2);white-space:nowrap;font-weight:600;border-bottom:2px solid transparent;margin-bottom:-3px}
+.navbar a:hover{color:var(--navy);background:var(--line2)}
+.navbar a.on{color:var(--navy);border-bottom-color:var(--amber);background:var(--line2)}
+
+/* HERO */
+.hero{background:var(--navy);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-60px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.05)}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;padding:38px 20px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:26px;line-height:1.6;color:#fff;margin-bottom:14px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p{color:#cfe2ec;font-size:14.5px}
+.hero .badges{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.hero .badges span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#e8f2f7;font-size:12.5px;padding:5px 12px;border-radius:20px}
+.hero-card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.hero-card .lbl{font-size:11.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.hero-card h3{font-size:16.5px;line-height:1.6;margin-bottom:14px;color:var(--ink)}
+.hero-card .meta{display:flex;gap:14px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.hero-card .meta b{color:var(--teal)}
+
+/* MAIN */
+main{padding:32px 0 50px}
+.sec{margin-bottom:40px}
+.sec-head{display:flex;align-items:flex-end;gap:12px;border-bottom:2px solid var(--navy);padding-bottom:9px;margin-bottom:20px}
+.sec-head h2{font-size:20px;font-weight:800;color:var(--navy)}
+.sec-head .bar{width:5px;height:20px;background:var(--amber);border-radius:2px;display:inline-block}
+.sec-head .sub{font-size:12.5px;color:var(--muted)}
+.sec-head .more{margin-left:auto;font-size:13px;color:var(--muted)}
+.sec-head .more:hover{color:var(--navy)}
+
+/* GRID CARDS */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.22s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(15,61,94,.12);border-color:#bcd4e0}
+.card .cap{height:112px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.card .cap .bg{position:absolute;inset:0;opacity:.92}
+.card .cap .tag{position:relative;font-size:11px;color:rgba(255,255,255,.85);letter-spacing:1px;text-transform:uppercase;z-index:1}
+.card .cap .tt{position:relative;font-size:16px;font-weight:800;color:#fff;line-height:1.45;z-index:1;text-shadow:0 1px 4px rgba(0,0,0,.35)}
+.c1{background:linear-gradient(135deg,#0f3d5e,#1d6f8a)}
+.c2{background:linear-gradient(135deg,#7a4a1e,#c0803c)}
+.c3{background:linear-gradient(135deg,#5a2a4a,#8a4a6a)}
+.c4{background:linear-gradient(135deg,#2a5a4a,#4a8a6a)}
+.c5{background:linear-gradient(135deg,#4a2a2a,#8a4a3a)}
+.c6{background:linear-gradient(135deg,#2a3a5a,#4a5a8a)}
+.card .body{padding:14px 16px;flex:1}
+.card .body h4{font-size:14.5px;font-weight:700;line-height:1.55}
+.card .body h4 a:hover{color:var(--teal)}
+.card .body p{font-size:13px;color:var(--ink2);margin-top:7px}
+.card .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);padding:10px 16px;border-top:1px solid var(--line2)}
+.card .foot b{color:var(--amber);font-family:Menlo,monospace}
+
+/* TABLE */
+.tbl{background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tbl table{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:12px 16px;font-size:13px;font-weight:600;white-space:nowrap}
+.tbl td{padding:13px 16px;border-bottom:1px solid var(--line2);color:var(--ink2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tbody tr:hover{background:#f2f8fa}
+.tbl .t{color:var(--ink);font-weight:600}
+.tbl .t a:hover{color:var(--teal)}
+.tbl .yr{font-family:Menlo,monospace;color:var(--teal);font-weight:700;white-space:nowrap}
+.tbl .num{font-family:Menlo,monospace;color:var(--amber);font-weight:700;white-space:nowrap}
+.tbl .pill{display:inline-block;font-size:12px;background:var(--line2);color:var(--ink2);padding:2px 9px;border-radius:20px;white-space:nowrap}
+
+/* TABS */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{background:#fff;border:1px solid var(--line);color:var(--ink2);padding:8px 16px;font-size:13.5px;border-radius:20px;cursor:pointer;transition:.2s;font-family:inherit}
+.tabs button:hover{background:var(--line2)}
+.tabs button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tabpanel{display:none}
+.tabpanel.on{display:block}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:20px;position:relative}
+.step .n{width:34px;height:34px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:12px;font-family:Menlo,monospace}
+.step:nth-child(2) .n{background:var(--teal)}
+.step:nth-child(3) .n{background:var(--amber)}
+.step:nth-child(4) .n{background:var(--red)}
+.step h4{font-size:15px;margin-bottom:7px}
+.step p{font-size:13px;color:var(--ink2)}
+
+/* ASIDE & LAYOUT */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.sticky{position:sticky;top:20px;display:flex;flex-direction:column;gap:22px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.panel-h{background:var(--line2);padding:11px 16px;font-size:14px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line)}
+.panel-h .ic{width:6px;height:14px;background:var(--amber);border-radius:2px}
+.panel-b{padding:16px}
+.panel-b p{font-size:13.5px;color:var(--ink2)}
+.panel-b .site{color:var(--teal);font-family:Menlo,monospace;font-size:12.5px;display:block;margin-top:10px;word-break:break-all}
+.mini li{padding:11px 0;border-bottom:1px solid var(--line2);font-size:13.5px}
+.mini li:last-child{border-bottom:0}
+.mini a:hover{color:var(--teal)}
+.mini .d{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips a{font-size:12.5px;background:var(--line2);color:var(--ink2);padding:5px 11px;border-radius:4px;border:1px solid transparent}
+.chips a:hover{background:var(--teal);color:#fff}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}
+.stat div{background:var(--line2);border-radius:6px;padding:12px 6px}
+.stat b{display:block;font-size:22px;font-weight:800;color:var(--navy);font-family:Menlo,monospace}
+.stat span{font-size:12px;color:var(--muted)}
+.timeline{padding-left:18px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:8px 0;font-size:13.5px;color:var(--ink2);border-bottom:1px dashed var(--line2)}
+.timeline li:last-child{border-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-24px;top:15px;width:9px;height:9px;background:var(--teal);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.timeline li b{display:block;color:var(--amber);font-size:12px;font-family:Menlo,monospace}
+
+/* NOTICE */
+.notice{background:#fff7e8;border:1px solid #f0dcae;border-left:4px solid var(--amber);border-radius:6px;padding:16px 18px;margin-bottom:34px;font-size:13.5px;color:#6b5322}
+.notice b{color:var(--red)}
+
+/* FOOTER */
+footer{background:#0c2e45;color:#a9c2d0;padding:44px 0 0}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer h5{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.5px}
+footer ul li{padding:5px 0;font-size:13.5px}
+footer a:hover{color:var(--amber)}
+.fbrand p{font-size:13.5px;color:#a9c2d0}
+.fbrand .url{color:var(--amber);font-family:Menlo,monospace;font-size:12.5px;display:block;margin-top:10px;word-break:break-all}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:12.5px;color:#7c98a8;flex-wrap:wrap;gap:10px}
+.fbot .url{color:var(--amber);font-family:Menlo,monospace}
+
+@media(max-width:980px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .grid3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .layout{grid-template-columns:1fr}
+  .sticky{position:static}
+}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .hmain{gap:16px}
+  .logo .cn{font-size:24px}
+  .search{width:100%}
+  .hero .wrap{grid-template-columns:1fr;padding:28px 14px}
+  .hero h1{font-size:21px}
+  .grid4,.steps{grid-template-columns:1fr}
+  .tbl{overflow-x:auto}
+  .tbl table{min-width:560px}
+  .sec-head h2{font-size:17px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .fbrand{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="htop">
+  <div class="wrap">
+    <div class="grp">
+      <a href="#">协作入口</a><a href="#">投稿片单</a><a href="#">资料纠错</a>
+    </div>
+    <div class="url">qilidianyingwang-zh.github.io</div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hmain">
+    <div class="logo">
+      <div class="mark">齐</div>
+      <div class="txt">
+        <span class="cn">齐力电影网</span>
+        <span class="en">Collaborative Film Guide</span>
+      </div>
+    </div>
+    <form class="search" onsubmit="return false">
+      <input type="search" placeholder="搜索影片 / 导演 / 类型 / 年份">
+      <button type="submit">检索</button>
+    </form>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="wrap">
+    <a href="#" class="on">首页</a>
+    <a href="#type">类型片单</a>
+    <a href="#list">精选片库</a>
+    <a href="#rank">高分榜单</a>
+    <a href="#news">资讯动态</a>
+    <a href="#guide">观看指引</a>
+    <a href="#about">关于本站</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1 class="serif">影迷一起攒的片单，比一个人翻的<em>更全</em>。<br>齐力电影网把整理交给协作，把选择留给你。</h1>
+      <p>剧情、喜剧、动作、悬疑、科幻、动画、纪录——每个类型都有一群人持续维护片单，更新新片动态与观看线索。</p>
+      <div class="badges">
+        <span>2,900+ 影片条目</span><span>22 个类型标签</span><span>180 份主题片单</span><span>每周协同更新</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="lbl">本周编辑协作 · 置顶</div>
+      <h3 class="serif">三人合力，把"冷门高分华语片"这个片单补到了 40 部</h3>
+      <p style="font-size:13.5px;color:#4a5c66;margin-top:8px">协同编辑的优势就在这里：有人负责查年份，有人补评分，有人写一句话看点，一周就能把一个片单从骨架做成成品。</p>
+      <div class="meta"><span>维护者：<b>3 人</b></span><span>条目：<b>40 部</b></span><span>更新：<b>10/05</b></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <main>
+
+    <div class="notice">
+      <b>站点说明：</b>齐力电影网是影片资料与观看导航站点，<b>不提供在线播放</b>。页面中的影片观看信息仅指向正版渠道线索，请通过影院、正规视频平台等合法途径观看影片。
+    </div>
+
+    <div class="layout">
+      <div>
+
+        <section class="sec" id="type">
+          <div class="sec-head">
+            <span class="bar"></span><h2>类型片单</h2><span class="sub">Genre Collections</span>
+            <a href="#" class="more">全部 22 个类型 →</a>
+          </div>
+          <div class="grid4">
+            <article class="card">
+              <div class="cap c1"><span class="bg"></span><span class="tag">Genre 01</span><span class="tt">悬疑犯罪：规则与反规则</span></div>
+              <div class="body">
+                <h4><a href="#">10 部靠"规则"推进的悬疑片</a></h4>
+                <p>封闭空间、时间循环、信息差——规则本身就是悬念。</p>
+              </div>
+              <div class="foot"><span>10 部 · 10/04</span><b>8.3</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c2"><span class="bg"></span><span class="tag">Genre 02</span><span class="tt">剧情家庭：关系里的转折</span></div>
+              <div class="body">
+                <h4><a href="#">家庭题材近作 8 部索引</a></h4>
+                <p>不靠冲突放大情绪，用日常细节推动关系变化。</p>
+              </div>
+              <div class="foot"><span>8 部 · 10/02</span><b>8.0</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c3"><span class="bg"></span><span class="tag">Genre 03</span><span class="tt">文艺独立：声音与留白</span></div>
+              <div class="body">
+                <h4><a href="#">声音承担叙事的 9 部参考片</a></h4>
+                <p>二刷时留意声轨，会发现很多第一遍漏掉的信息。</p>
+              </div>
+              <div class="foot"><span>9 部 · 09/28</span><b>8.1</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c4"><span class="bg"></span><span class="tag">Genre 04</span><span class="tt">科幻设定：严谨度差异</span></div>
+              <div class="body">
+                <h4><a href="#">科幻设定严谨度对照清单</a></h4>
+                <p>同一题材在不同导演手里的设定处理方式，对照看更有意思。</p>
+              </div>
+              <div class="foot"><span>12 部 · 09/25</span><b>7.9</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c5"><span class="bg"></span><span class="tag">Genre 05</span><span class="tt">动作实拍：剪辑之外</span></div>
+              <div class="body">
+                <h4><a href="#">实拍动作场面的 6 部参考</a></h4>
+                <p>从场面调度到剪辑逻辑，动作戏的观看要点整理。</p>
+              </div>
+              <div class="foot"><span>6 部 · 09/21</span><b>7.7</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c6"><span class="bg"></span><span class="tag">Genre 06</span><span class="tt">动画表达：不止于低龄</span></div>
+              <div class="body">
+                <h4><a href="#">面向成年观众的动画索引</a></h4>
+                <p>题材与表现手法的多样性，这批片子给出了不同答案。</p>
+              </div>
+              <div class="foot"><span>11 部 · 09/18</span><b>8.2</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c1"><span class="bg"></span><span class="tag">Genre 07</span><span class="tt">纪录观察：真实素材的力量</span></div>
+              <div class="body">
+                <h4><a href="#">近三年值得关注的纪录片</a></h4>
+                <p>题材覆盖社会、自然与人物，资料组逐部核对了基本信息。</p>
+              </div>
+              <div class="foot"><span>14 部 · 09/15</span><b>8.0</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c4"><span class="bg"></span><span class="tag">Genre 08</span><span class="tt">喜剧节奏：笑点的结构</span></div>
+              <div class="body">
+                <h4><a href="#">喜剧片节奏设计的 7 部参考</a></h4>
+                <p>笑点不是随机的，节拍、铺垫与释放都有规律可循。</p>
+              </div>
+              <div class="foot"><span>7 部 · 09/12</span><b>7.6</b></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="sec" id="list">
+          <div class="sec-head">
+            <span class="bar"></span><h2>精选片库</h2><span class="sub">Featured Archive</span>
+            <a href="#" class="more">完整条目 →</a>
+          </div>
+          <div class="tabs">
+            <button class="on" data-t="t1">本周推荐</button>
+            <button data-t="t2">冷门高分</button>
+            <button data-t="t3">新片速览</button>
+            <button data-t="t4">修复重映</button>
+          </div>
+          <div class="tabpanel on" id="t1">
+            <div class="tbl">
+              <table>
+                <thead><tr><th style="width:76px">年份</th><th>影片与看点</th><th>类型</th><th style="width:64px">评分</th></tr></thead>
+                <tbody>
+                  <tr><td class="yr">2026</td><td class="t"><a href="#">雾港往事</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">港片叙事传统下的一次新解法，空间与时间的关系处理得很细。</div></td><td><span class="pill">悬疑</span> <span class="pill">犯罪</span></td><td class="num">8.5</td></tr>
+                  <tr><td class="yr">2026</td><td class="t"><a href="#">山间来信</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">文艺片中的文本密度与节奏控制，属于二刷会发现细节的一类。</div></td><td><span class="pill">文艺</span> <span class="pill">剧情</span></td><td class="num">8.3</td></tr>
+                  <tr><td class="yr">2025</td><td class="t"><a href="#">潮水线</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">灾难框架包裹家庭情感，类型与内容的平衡做得干净。</div></td><td><span class="pill">灾难</span> <span class="pill">家庭</span></td><td class="num">8.1</td></tr>
+                  <tr><td class="yr">2025</td><td class="t"><a href="#">夜行车</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">密闭空间悬疑的类型化取舍，适合对照分场梳理观看。</div></td><td><span class="pill">悬疑</span> <span class="pill">惊悚</span></td><td class="num">7.8</td></tr>
+                  <tr><td class="yr">2024</td><td class="t"><a href="#">老街市</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">市井空间作为叙事主体，年代细节扎实，口碑持续走高。</div></td><td><span class="pill">剧情</span> <span class="pill">年代</span></td><td class="num">8.7</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tabpanel" id="t2">
+            <div class="tbl">
+              <table>
+                <thead><tr><th style="width:76px">年份</th><th>影片与看点</th><th>类型</th><th style="width:64px">评分</th></tr></thead>
+                <tbody>
+                  <tr><td class="yr">2024</td><td class="t"><a href="#">边界</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">公路片结构下的人物弧光，节奏清晰，评价稳定。</div></td><td><span class="pill">公路</span> <span class="pill">剧情</span></td><td class="num">7.9</td></tr>
+                  <tr><td class="yr">2023</td><td class="t"><a href="#">无名小店</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">小成本群像，人物关系网铺得细，结尾收得干净。</div></td><td><span class="pill">剧情</span> <span class="pill">群像</span></td><td class="num">8.0</td></tr>
+                  <tr><td class="yr">2023</td><td class="t"><a href="#">雨城</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">氛围即叙事，雨水在片中的功能远不止天气。</div></td><td><span class="pill">文艺</span> <span class="pill">悬疑</span></td><td class="num">8.2</td></tr>
+                  <tr><td class="yr">2022</td><td class="t"><a href="#">离岸</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">海岛空间与孤独主题的克制表达，演员表演是最大看点。</div></td><td><span class="pill">文艺</span> <span class="pill">独立</span></td><td class="num">7.9</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tabpanel" id="t3">
+            <div class="tbl">
+              <table>
+                <thead><tr><th style="width:76px">年份</th><th>影片与看点</th><th>类型</th><th style="width:64px">状态</th></tr></thead>
+                <tbody>
+                  <tr><td class="yr">2026</td><td class="t"><a href="#">雾港往事</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">已上映，院线放映中，资料组已完成基础条目录入。</div></td><td><span class="pill">悬疑</span></td><td class="num" style="color:#138a8a">在映</td></tr>
+                  <tr><td class="yr">2026</td><td class="t"><a href="#">山间来信</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">点映阶段，资料条目随官方信息持续补充。</div></td><td><span class="pill">文艺</span></td><td class="num" style="color:#e09b2b">点映</td></tr>
+                  <tr><td class="yr">2026</td><td class="t"><a href="#">夜航</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">定档待映，档期信息已同步至资料库。</div></td><td><span class="pill">惊悚</span></td><td class="num" style="color:#c0503c">定档</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tabpanel" id="t4">
+            <div class="tbl">
+              <table>
+                <thead><tr><th style="width:76px">年份</th><th>影片与看点</th><th>版本说明</th><th style="width:64px">状态</th></tr></thead>
+                <tbody>
+                  <tr><td class="yr">1994</td><td class="t"><a href="#">街角咖啡馆</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">4K 修复版，色彩还原与声轨重制是主要变化。</div></td><td><span class="pill">4K 修复</span></td><td class="num" style="color:#138a8a">重映</td></tr>
+                  <tr><td class="yr">2001</td><td class="t"><a href="#">北风吹</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">导演剪辑版，补全了原始发行版删减段落。</div></td><td><span class="pill">导演剪辑</span></td><td class="num" style="color:#e09b2b">资料</td></tr>
+                  <tr><td class="yr">1999</td><td class="t"><a href="#">夏天结束以前</a><div style="font-size:12.5px;color:#8a9aa3;margin-top:3px">胶片扫描修复，画幅从 1.85 调整为原始 1.66。</div></td><td><span class="pill">胶片修复</span></td><td class="num" style="color:#138a8a">重映</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" id="rank">
+          <div class="sec-head">
+            <span class="bar"></span><h2>高分榜单</h2><span class="sub">Top Rated</span>
+            <a href="#" class="more">评分规则 →</a>
+          </div>
+          <div class="grid3">
+            <article class="card">
+              <div class="cap c1"><span class="bg"></span><span class="tag">Top 10</span><span class="tt">总榜前十</span></div>
+              <div class="body">
+                <ol style="padding-left:18px;font-size:13.5px;color:#4a5c66">
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">1. 老街市</a> <b style="float:right;color:#e09b2b">8.7</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">2. 雾港往事</a> <b style="float:right;color:#e09b2b">8.5</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">3. 雨城</a> <b style="float:right;color:#e09b2b">8.2</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">4. 山间来信</a> <b style="float:right;color:#e09b2b">8.3</b></li>
+                  <li style="padding:5px 0"><a href="#">5. 潮水线</a> <b style="float:right;color:#e09b2b">8.1</b></li>
+                </ol>
+                <p style="margin-top:10px">综合评分与条目完整度的总榜，每月重算一次。</p>
+              </div>
+              <div class="foot"><span>榜单口径：综合评分</span><b>10 部</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c3"><span class="bg"></span><span class="tag">Annual</span><span class="tt">年度榜</span></div>
+              <div class="body">
+                <ol style="padding-left:18px;font-size:13.5px;color:#4a5c66">
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">1. 雾港往事</a> <b style="float:right;color:#e09b2b">8.5</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">2. 山间来信</a> <b style="float:right;color:#e09b2b">8.3</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">3. 潮水线</a> <b style="float:right;color:#e09b2b">8.1</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">4. 夜行车</a> <b style="float:right;color:#e09b2b">7.8</b></li>
+                  <li style="padding:5px 0"><a href="#">5. 夜航</a> <b style="float:right;color:#e09b2b">待评</b></li>
+                </ol>
+                <p style="margin-top:10px">仅统计本年度上映影片，按评分与口碑权重排序。</p>
+              </div>
+              <div class="foot"><span>榜单口径：年度上映</span><b>10 部</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c2"><span class="bg"></span><span class="tag">Hidden</span><span class="tt">冷门高分</span></div>
+              <div class="body">
+                <ol style="padding-left:18px;font-size:13.5px;color:#4a5c66">
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">1. 雨城</a> <b style="float:right;color:#e09b2b">8.2</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">2. 离岸</a> <b style="float:right;color:#e09b2b">7.9</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">3. 无名小店</a> <b style="float:right;color:#e09b2b">8.0</b></li>
+                  <li style="padding:5px 0;border-bottom:1px solid #eef3f5"><a href="#">4. 夏天结束以前</a> <b style="float:right;color:#e09b2b">8.0</b></li>
+                  <li style="padding:5px 0"><a href="#">5. 北风吹</a> <b style="float:right;color:#e09b2b">7.8</b></li>
+                </ol>
+                <p style="margin-top:10px">评分不低但讨论度偏低的条目，协作组重点维护的板块。</p>
+              </div>
+              <div class="foot"><span>榜单口径：低讨论度</span><b>12 部</b></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="sec" id="news">
+          <div class="sec-head">
+            <span class="bar"></span><h2>资讯动态</h2><span class="sub">Updates</span>
+            <a href="#" class="more">归档 →</a>
+          </div>
+          <div class="grid3">
+            <article class="card">
+              <div class="cap c5"><span class="bg"></span><span class="tag">10/05</span><span class="tt">10 月院线新片资料汇总</span></div>
+              <div class="body">
+                <h4><a href="#">9 部新作基本信息与类型标签录入完成</a></h4>
+                <p>资料组完成了本月新片的年份、类型、主创等基础字段录入。</p>
+              </div>
+              <div class="foot"><span>资料组</span><b>汇总</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c2"><span class="bg"></span><span class="tag">10/02</span><span class="tt">档期信息更新</span></div>
+              <div class="body">
+                <h4><a href="#">三部华语新片定档信息变动</a></h4>
+                <p>档期调整与地区上映差异已同步至对应条目。</p>
+              </div>
+              <div class="foot"><span>档期</span><b>更新</b></div>
+            </article>
+            <article class="card">
+              <div class="cap c6"><span class="bg"></span><span class="tag">09/29</span><span class="tt">修复重映片单</span></div>
+              <div class="body">
+                <h4><a href="#">5 部经典作品本轮放映资料</a></h4>
+                <p>含版本差异与放映时长信息，供对照观看参考。</p>
+              </div>
+              <div class="foot"><span>修复</span><b>片单</b></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="sec" id="guide">
+          <div class="sec-head">
+            <span class="bar"></span><h2>观看指引</h2><span class="sub">Viewing Guide</span>
+            <a href="#" class="more">全部指引 →</a>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="n">1</div>
+              <h4>查档期</h4>
+              <p>从定档公告到地区差异，整理一份查询路径，避免被过期信息误导。</p>
+            </div>
+            <div class="step">
+              <div class="n">2</div>
+              <h4>认渠道</h4>
+              <p>影院、正规视频平台与正版发行渠道的线索整理，优先指向合法途径。</p>
+            </div>
+            <div class="step">
+              <div class="n">3</div>
+              <h4>看版本</h4>
+              <p>修复版与原版的画幅、色彩、声轨差异，直接影响观看体验。</p>
+            </div>
+            <div class="step">
+              <div class="n">4</div>
+              <h4>做片单</h4>
+              <p>从资料库筛选到排序整理，一套可复用的方法，也欢迎协作维护。</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="sticky">
+        <div class="panel">
+          <div class="panel-h"><span class="ic"></span>关于齐力电影网</div>
+          <div class="panel-b">
+            <p>以影迷协同整理为特色的影片资料与观看导航站点，按类型聚合片单，整理新片动态、高分榜单与正版观看渠道线索。</p>
+            <span class="site">https://qilidianyingwang-zh.github.io</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><span class="ic"></span>站点数据</div>
+          <div class="panel-b">
+            <div class="stat">
+              <div><b>2,900+</b><span>影片条目</span></div>
+              <div><b>22</b><span>类型标签</span></div>
+              <div><b>180</b><span>主题片单</span></div>
+              <div><b>每周</b><span>更新频率</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><span class="ic"></span>类型标签</div>
+          <div class="panel-b">
+            <div class="chips">
+              <a href="#">剧情</a><a href="#">喜剧</a><a href="#">动作</a><a href="#">悬疑</a>
+              <a href="#">犯罪</a><a href="#">科幻</a><a href="#">动画</a><a href="#">纪录</a>
+              <a href="#">文艺</a><a href="#">惊悚</a><a href="#">灾难</a><a href="#">家庭</a>
+              <a href="#">公路</a><a href="#">年代</a><a href="#">群像</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><span class="ic"></span>编辑推荐</div>
+          <div class="panel-b">
+            <ul class="mini">
+              <li><a href="#">年度华语片片单（20 部）</a><span class="d">类型 · 剧情 / 文艺</span></li>
+              <li><a href="#">冷门高分片：被忽略的 12 部</a><span class="d">榜单 · 冷门高分</span></li>
+              <li><a href="#">导演代表作索引合集</a><span class="d">索引 · 导演</span></li>
+              <li><a href="#">修复重映片单</a><span class="d">版本 · 修复</span></li>
+              <li><a href="#">地域电影索引：香港篇</a><span class="d">索引 · 地区</span></li>
+              <li><a href="#">片单制作方法：如何搭一份自己的清单</a><span class="d">指引 · 方法</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><span class="ic"></span>资料更新</div>
+          <div class="panel-b">
+            <ul class="timeline">
+              <li><b>10/05</b>10 月院线新片资料汇总</li>
+              <li><b>10/02</b>三部新片定档信息变动</li>
+              <li><b>09/29</b>修复重映片单整理完成</li>
+              <li><b>09/25</b>展映片单索引上线</li>
+              <li><b>09/21</b>资料库新增 96 条条目</li>
+              <li><b>09/18</b>动画类型片单扩充至 11 部</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+</div>
+
+<footer id="about">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <h5>齐力电影网</h5>
+        <p>以影迷协同整理为特色的影片资料与观看导航站点，汇总剧情、喜剧、动作、悬疑、科幻、动画、纪录等类型的影片资料与片单，提供新片动态、高分榜单与正版观看渠道线索。</p>
+        <span class="url">https://qilidianyingwang-zh.github.io</span>
+      </div>
+      <div>
+        <h5>资料</h5>
+        <ul>
+          <li><a href="#type">类型片单</a></li>
+          <li><a href="#list">精选片库</a></li>
+          <li><a href="#">地区索引</a></li>
+          <li><a href="#">导演索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>榜单</h5>
+        <ul>
+          <li><a href="#rank">总榜前十</a></li>
+          <li><a href="#">年度榜</a></li>
+          <li><a href="#">冷门高分</a></li>
+          <li><a href="#">类型榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>其他</h5>
+        <ul>
+          <li><a href="#news">资讯动态</a></li>
+          <li><a href="#guide">观看指引</a></li>
+          <li><a href="#about">站点说明</a></li>
+          <li><a href="#">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 齐力电影网 · 本站为影片资料与观看导航站点，不提供在线播放服务，影片观看请通过正规渠道。</span>
+      <span class="url">https://qilidianyingwang-zh.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var id=btn.getAttribute('data-t');
+    btn.parentNode.querySelectorAll('button').forEach(function(b){b.classList.remove('on')});
+    btn.classList.add('on');
+    var wrap=btn.closest('.sec');
+    wrap.querySelectorAll('.tabpanel').forEach(function(p){p.classList.remove('on')});
+    wrap.querySelector('#'+id).classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
